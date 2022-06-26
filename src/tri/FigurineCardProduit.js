@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router";
+import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
@@ -116,60 +117,53 @@ class Produit extends React.Component {
             style={{ width: "100%", margin: "0", height: "200vh" }}
           >
             <div className="row align-items-center">
-              <div
-                id="carouselExampleControls"
-                className="carousel slide"
-                data-bs-ride="carousel"
-                style={{ width: "400px" }}
+              <Carousel
+                style={{
+                  height: "300px",
+                  margin: "auto",
+                  backgroundColor: "black",
+                  maxWidth: "300px",
+                }}
               >
-                <div className="carousel-inner">
-                  <div className="carousel-item active">
-                    <img
-                      src={this.state.images[0]}
-                      className="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div className="carousel-item">
-                    <img
-                      src={this.state.images[1]}
-                      className="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div className="carousel-item">
-                    <img
-                      src={this.state.images[2]}
-                      className="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                </div>
-                <button
-                  className="carousel-control-prev"
-                  type="button"
-                  data-bs-target="#carouselExampleControls"
-                  data-bs-slide="prev"
-                >
-                  <span
-                    className="carousel-control-prev-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span className="visually-hidden">Previous</span>
-                </button>
-                <button
-                  className="carousel-control-next"
-                  type="button"
-                  data-bs-target="#carouselExampleControls"
-                  data-bs-slide="next"
-                >
-                  <span
-                    className="carousel-control-next-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span className="visually-hidden">Next</span>
-                </button>
-              </div>
+                <Carousel.Item interval={1000}>
+                  <img
+                    className="d-block w-100 p-3 h-100 d-inline-block"
+                    style={{ margin: "auto" }}
+                    src={this.state.images[0]}
+                    alt="First slide"
+                  />
+                  <Carousel.Caption
+                    style={{ color: "#0000" }}
+                  ></Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item interval={1000}>
+                  <img
+                    className="d-block w-100 p-3 h-100 d-inline-block"
+                    style={{ margin: "auto" }}
+                    src={this.state.images[1]}
+                    alt="Second slide"
+                  />
+                  <Carousel.Caption></Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item interval={1000}>
+                  <img
+                    className="d-block w-100 p-3 h-100 d-inline-block"
+                    style={{ margin: "auto" }}
+                    src={this.state.images[2]}
+                    alt="Second slide"
+                  />
+                  <Carousel.Caption></Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100 p-3 h-100 d-inline-block"
+                    style={{ margin: "auto" }}
+                    src={this.state.images[3]}
+                    alt="Third slide"
+                  />
+                  <Carousel.Caption></Carousel.Caption>
+                </Carousel.Item>
+              </Carousel>
               <div className="col-md-6">
                 <div className="info-main">
                   <h5>{this.state.figurine.title}</h5>
