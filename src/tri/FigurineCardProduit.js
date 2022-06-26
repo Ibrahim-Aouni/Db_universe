@@ -109,11 +109,11 @@ class Produit extends React.Component {
 
   render() {
     return (
-      <div className="row" style={{ maxWidth: "100%", height: "100vh" }}>
-        <div className="col-12" style={{ maxWidth: "100%", height: "100vh" }}>
+      <div className="row" style={{ maxWidth: "100%", height: "150vh" }}>
+        <div className="col-12" style={{ maxWidth: "100%", height: "150vh" }}>
           <div
             className="card border-orange p-4"
-            style={{ width: "100%", margin: "0", height: "100vh" }}
+            style={{ width: "100%", margin: "0", height: "150vh" }}
           >
             <div className="row align-items-center">
               <div
